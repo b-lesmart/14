@@ -1,0 +1,194 @@
+header{
+    color: color('white');
+    padding: 240px 0 70px;
+    background: linear-gradient(to right, color('blue'), color('green'));
+    @media screen and(max-width: 768px){
+        padding-top: 150px;
+    }
+    h1{
+        font-weight: 700;
+        @media screen and(max-width: 768px){
+            font-size: 25px;
+        }
+    }
+    .header--box{
+        width: 300px;
+        position: absolute;
+        bottom: -90px;
+        @media screen and(max-width: 955px){
+            width: 200px;
+            position: relative;
+            bottom: 0;
+        }
+        @media screen and(max-width: 768px){
+            width: 170px;
+            position: relative;
+            bottom: 0;
+        }
+        @media screen and(max-width: 576px){
+            margin-bottom: 30px;
+        }
+    }
+    .btn--header{
+        padding: 10px 30px 10px 20px;
+        color: color('blue');
+        font-weight: 600;
+        border: 2px solid transparent;
+        background-color: color('white');
+        @media screen and (max-width: 572px){
+            margin-bottom: 20px;
+        }
+        &:hover{
+            background-color: transparentize(color('white'),.9);
+            color: color('white');
+            border-color: color('white');
+        }
+        .play--btn{
+            margin-right: 5px;
+            display: inline-block;
+            background-color: color('white');
+            padding-top: 1px;
+            @include circle(25px);
+            img{
+                width: 15px;
+            }
+        }
+    }
+    .shares{
+        display: inline-block;
+        img{
+            width: 17px;
+            height: 17px;
+            margin-right: 5px;
+            opacity: .5;
+            @include transition(0.3s all ease);
+            &:hover{
+                opacity: 1;
+                @include transition(0.3s all ease);
+            }
+        }
+    }
+}
+
+#subscribe{
+    .btn--submit{
+        cursor: pointer;
+    }
+}
+
+#video{
+    background: lighten(color('medwhite'),3);
+    @include box-shadow(inset 0 5px 50px -5px transparentize(color('dusk'),.9));
+    h2{
+        font-weight: 700;
+    }
+    .btn--video{
+        padding: 10px 20px;
+        color: color('white');
+        font-weight: 600;
+        border: 2px solid transparent;
+        background-color: color('blue');
+        @media screen and (max-width: 572px){
+            margin-bottom: 20px;
+        }
+        &:hover{
+            background-color: transparentize(color('white'),.9);
+            color: color('blue');
+            border-color: color('blue');
+        }
+    }
+}
+
+#features{
+    .feature{
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+        @include border-radius(5px);
+        @include box-shadow(0 15px 50px -5px transparentize(color('dusk'),.75));
+        @include transition(.7s all ease);
+        @media screen and(max-width: 576px){
+            padding: 30px;
+        }
+        &:hover{
+            @include box-shadow(0 25px 50px -5px transparentize(color('dusk'),.4));
+            @include transition(0.3s all ease);
+        }
+        .feature--icon{
+            margin-bottom: 30px;
+            i{
+                font-size: 40px;
+                color: color('blue');
+            }
+        }
+        .feature--title{
+            margin-bottom: 20px;
+            color: color('gray');
+        }
+        .feature--description{
+            font-size: $base-font-size - 1;
+            line-height: 1.5em!important;
+        }
+    }
+}
+
+#premium{
+    background-color: color('medwhite');
+    .premium--img{
+        @media screen and(max-width: 576px){
+            margin-bottom: 30px;
+        }
+    }
+    .premium--features{
+        margin-bottom: 30px;
+        .premium--icon{
+            font-size: 32px;
+            color: color('green');
+        }
+    }
+}
+
+#testimonial{
+    padding-bottom: 30px;
+    background-color: color('darkwhite');
+    .testi{
+        background-color: color('white');
+        padding: 40px;
+        margin-bottom: 20px;
+        @include border-radius(5px);
+        @include box-shadow(0 15px 50px -5px transparentize(color('dusk'),.75));
+        .testi--user{
+            margin-bottom: 20px;
+            .testi--photo{
+                @include circle(40px);
+                @media screen and(max-width: 576px){
+                    @include circle(35px);
+                }
+            }
+            .testi--name{
+                font-weight: 500;
+                color: color('gray');
+                margin-bottom: -5px;
+            }
+            .testi--social{
+                a{
+                    display: inline;
+                    img{
+                        width: 15px;
+                        margin-left: 5px;
+                        opacity: .4;
+                        @include transition(0.3s all ease);
+                        &:hover{
+                            opacity: 1;
+                            @include transition(0.3s all ease);
+                        }
+                    }
+                }
+            }
+            .testi--position{
+                font-size: $base-font-size - 2;
+                line-height: 10px!important;
+            }
+        }
+    }
+}
